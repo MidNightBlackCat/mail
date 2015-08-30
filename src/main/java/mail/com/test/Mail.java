@@ -235,8 +235,8 @@ public class Mail {
      */
 	public boolean setFrom(String from) {
 		log.debug("set email sender");
-		AtomicReference<String> nick = new AtomicReference<>("");
-        AtomicReference<String> name = new AtomicReference<>("");
+		AtomicReference<String> nick = new AtomicReference<String>("");
+        AtomicReference<String> name = new AtomicReference<String>("");
 		try {
 			Resource resource = new ClassPathResource("mail/mail.properties");
 			Properties nickprops = PropertiesLoaderUtils
@@ -448,7 +448,7 @@ public class Mail {
 			String temp = props.getProperty("mail.template");
 			Mail mail = new Mail(server);
 			mail.setNeedAuth(true);
-			HashMap<String, String> root = new HashMap<>();
+			HashMap<String, String> root = new HashMap<String, String>();
 			root.put("content", content);
 			template = FreemarkerUtil.getTemplate(temp);
             if (null == template)

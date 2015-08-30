@@ -20,7 +20,7 @@ public class Test {
 		String userNameValue = "夜夜夜猫";
 		String urlLinkValue = "http://www.baidu.com";
 		
-		Map<String, String> contentMap = new HashMap<>();
+		Map<String, String> contentMap = new HashMap<String, String>();
 		contentMap.put(USERNAME, userNameValue);
         contentMap.put(URLLINK, urlLinkValue);
 
